@@ -388,8 +388,9 @@ function toExponential(number, fractionDigits) {
  * 12345, 2    => '12345.00'
  * 12.345, 1   => '12.3'
  */
-function toFixed(/* number, fractionDigits */) {
-  throw new Error('Not implemented');
+function toFixed(number, fractionDigits) {
+  // throw new Error('Not implemented');
+  return Number.parseFloat(number).toFixed(fractionDigits);
 }
 
 /**
@@ -404,8 +405,9 @@ function toFixed(/* number, fractionDigits */) {
  * 12345, 7    => '12345.00'
  * 12.345, 4   => '12.35'
  */
-function toPrecision(/* number, precision */) {
-  throw new Error('Not implemented');
+function toPrecision(number, precision) {
+  // throw new Error('Not implemented');
+  return number.toPrecision(precision);
 }
 
 /**
@@ -418,8 +420,9 @@ function toPrecision(/* number, precision */) {
  * new Number(5) => 5
  * Number(-5)    => -5
  */
-function getNumberValue(/* number */) {
-  throw new Error('Not implemented');
+function getNumberValue(number) {
+  // throw new Error('Not implemented');
+  return number.valueOf();
 }
 
 /**
@@ -437,8 +440,10 @@ function getNumberValue(/* number */) {
  * 5        => true
  * '5'      => false
  */
-function isNumber(/* number */) {
-  throw new Error('Not implemented');
+function isNumber(number) {
+  // throw new Error('Not implemented');
+  // eslint-disable-next-line no-restricted-globals
+  return Number.isFinite(number);
 }
 
 /**
@@ -452,8 +457,9 @@ function isNumber(/* number */) {
  * 5.1  => false
  * '5'  => false
  */
-function isInteger(/* number */) {
-  throw new Error('Not implemented');
+function isInteger(number) {
+  // throw new Error('Not implemented');
+  return Number.isInteger(number);
 }
 
 /**
@@ -466,8 +472,9 @@ function isInteger(/* number */) {
  * '4.567abcdefgh' => 4.567
  * 'abcdefgh'      => NaN
  */
-function getFloatOnString(/* str */) {
-  throw new Error('Not implemented');
+function getFloatOnString(str) {
+  // throw new Error('Not implemented');
+  return Number.parseFloat(str);
 }
 
 /**
